@@ -2,7 +2,7 @@ package com.savstanis.pdc;
 
 import java.util.List;
 
-public class Main {
+public class MutexMain {
     private static final String MESSAGE = "Hello world!";
 
     public static void main(String[] args) {
