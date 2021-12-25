@@ -1,19 +1,22 @@
 package com.savstanis.pdc;
 
+import com.savstanis.pdc.algorithm.LockFreeLinkedList;
 import com.savstanis.pdc.algorithm.LockFreeQueue;
 
 public class LockFreeMain {
     public static void main(String[] args) {
-        LockFreeQueue<Integer> queue = new LockFreeQueue<>();
-        for (int i = 0; i < 100; i++) {
-            queue.push(i);
-        }
-        System.out.println(queue.size());
+        LockFreeLinkedList<Integer> lockFreeLinkedList = new LockFreeLinkedList<>();
 
         for (int i = 0; i < 100; i++) {
-            System.out.println(queue.pop());
+            lockFreeLinkedList.add(i);
         }
+        System.out.println();
 
-        System.out.println(queue.size());
+        for (int i = 0; i < 100; i++) {
+            System.out.println(lockFreeLinkedList.contains(i));
+            lockFreeLinkedList.remove(i);
+            System.out.println(lockFreeLinkedList.contains(i));
+
+        }
     }
 }
