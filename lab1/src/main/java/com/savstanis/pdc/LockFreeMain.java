@@ -1,7 +1,6 @@
 package com.savstanis.pdc;
 
 import com.savstanis.pdc.algorithm.LockFreeLinkedList;
-import com.savstanis.pdc.algorithm.LockFreeQueue;
 
 public class LockFreeMain {
     public static void main(String[] args) {
